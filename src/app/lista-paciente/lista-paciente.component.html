@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead class="table-primary">
+        <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let identificardor of listaPaciente">
+            <td>{{identificardor.idpaciente}}</td>
+            <td>{{identificardor.nombpaciente}}</td>
+            <td>{{identificardor.apellidos}}</td>
+            <td>{{identificardor.edad}}</td>
+            <td>{{identificardor.fechanacimiento}}</td>
+            <td>{{identificardor.correo}}</td>
+            <td>{{identificardor.telefono}}</td>
+            <td>
+                <!--<button class="btn btn-info">Modificar</button> -->
+                <button (click)= "eliminarPaciente(identificardor.idpaciente)" class="btn btn-danger" style="margin-top: 10px;">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
